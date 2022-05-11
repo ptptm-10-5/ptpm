@@ -1,0 +1,8 @@
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\0_DA_KetMon\DAL\Export\bin\Debug\Export.dll
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\0_DA_KetMon\DAL\Export\bin\Debug\Export.pdb
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\0_DA_KetMon\DAL\Export\obj\Debug\Export.dll
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\0_DA_KetMon\DAL\Export\obj\Debug\Export.pdb
+D:\GitHub\PTPM\GitHub\DAL\Export\bin\Debug\Export.dll
+D:\GitHub\PTPM\GitHub\DAL\Export\bin\Debug\Export.pdb
+D:\GitHub\PTPM\GitHub\DAL\Export\obj\Debug\Export.dll
+D:\GitHub\PTPM\GitHub\DAL\Export\obj\Debug\Export.pdb

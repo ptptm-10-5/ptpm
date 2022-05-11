@@ -1,0 +1,10 @@
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\0_DA_KetMon\DAL\DTO\bin\Debug\DTO.dll
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\0_DA_KetMon\DAL\DTO\bin\Debug\DTO.pdb
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\0_DA_KetMon\DAL\DTO\obj\Debug\DTO.dll
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\0_DA_KetMon\DAL\DTO\obj\Debug\DTO.pdb
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\0_DA_KetMon\DAL\DTO\bin\Debug\DTO.dll.config
+D:\GitHub\PTPM\GitHub\DAL\DTO\bin\Debug\DTO.dll.config
+D:\GitHub\PTPM\GitHub\DAL\DTO\bin\Debug\DTO.dll
+D:\GitHub\PTPM\GitHub\DAL\DTO\bin\Debug\DTO.pdb
+D:\GitHub\PTPM\GitHub\DAL\DTO\obj\Debug\DTO.dll
+D:\GitHub\PTPM\GitHub\DAL\DTO\obj\Debug\DTO.pdb
