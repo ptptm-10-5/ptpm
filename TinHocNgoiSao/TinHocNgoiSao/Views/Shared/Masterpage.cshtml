@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--font icon cho header-->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    
+    <link href="~/Content/themes/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <style>
+        #backtop {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 40px;
+            float: right;
+            right: 20px;
+            cursor: inherit;
+        }
+    </style>
+    <header>
+        <!--header-->
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="pull-left">
+                            <a href="#"><img src="~/Content/Hinh/logo.png" style="width:210px;height:80px" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="pull-left">
+                            <ul class="nav nav-navbar">
+                                <li>
+                                    <div class="search_box pull-left">
+                                        <form action="/StoreManager/XuLiTK" method="post" >
+                                            <input type="text" placeholder="Nhập từ khóa sản phẩm..." name="txtTuKhoa" style="height:45px;" />
+                                            <input type="submit" value="Tìm" style="height:45px;" />
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-phone"></i></a>
+                                </li>
+                                <li>
+                                    <a>HOTLINE</a>
+                                    <br />
+                                    <a style="font-weight:bold">19002403 (8:30 - 21:00)</a>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-shopping-cart"></i>GIỎ HÀNG</a>
+                                </li>
+                                <li><i class="fa fa-user"></i></li>
+                                <li>
+                                    <a>Đăng nhập <br />  Đăng Ký</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+        <div class="header-bottom"><!--header-bottom-->
+			<div class="">
+				<div class="row bg-danger">
+					
+						<div class="align-items-center">
+							<ul class="nav">
+                                <li class="nav-item  btn-outline-warning">
+                                    <a class="nav-link mt-1" href="/StoreManager/Home" style="color:white">LẮP ĐẶT PHÒNG NET</a>
+                                </li>
+                                    
+                                <li class="nav-item  btn-outline-warning">
+                                    <a class="nav-link mt-1" href="/StoreManager/Blog" style="color:white">TRẢ GÓP</a>
+                                </li>
+                                <li class="nav-item  btn-outline-warning">
+                                    <a class="nav-link mt-1" href="~/StoreManager/Support" style="color:white">BẢNG GIÁ</a>
+                                </li>
+                                <li class="nav-item  btn-outline-warning">
+                                    <a class="nav-link mt-1" href="#" style="color:white">XÂY DỰNG CẤU HÌNH </a>
+                                </li>
+                                <li class="nav-item  btn-outline-warning">
+                                    <a class="nav-link mt-1" href="#" style="color:white">KIỂM TRA BẢO HÀNH </a>
+                                </li>
+                                <li class="nav-item  btn-outline-warning">
+                                    <a class="nav-link mt-1" href="#" style="color:white">THIẾT BỊ MINING </a>
+                                </li>
+                            </ul>
+						</div>
+					
+					
+				</div>
+                
+			</div>
+		</div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
