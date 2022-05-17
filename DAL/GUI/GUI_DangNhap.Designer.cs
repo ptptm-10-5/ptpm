@@ -32,7 +32,7 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTenTK = new System.Windows.Forms.TextBox();
             this.chkNhoMK = new System.Windows.Forms.CheckBox();
-            this.btnDangKy = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,16 +78,16 @@
             this.chkNhoMK.Text = "Nhớ mật khẩu";
             this.chkNhoMK.UseVisualStyleBackColor = true;
             // 
-            // btnDangKy
+            // btnThoat
             // 
-            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(415, 323);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(177, 42);
-            this.btnDangKy.TabIndex = 5;
-            this.btnDangKy.Text = "Đăng ký";
-            this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(415, 323);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(5);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(177, 42);
+            this.btnThoat.TabIndex = 5;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -130,7 +130,7 @@
             this.Controls.Add(this.chkNhoMK);
             this.Controls.Add(this.txtTenTK);
             this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.btnDangKy);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -148,7 +148,7 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTenTK;
         private System.Windows.Forms.CheckBox chkNhoMK;
-        private System.Windows.Forms.Button btnDangKy;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
