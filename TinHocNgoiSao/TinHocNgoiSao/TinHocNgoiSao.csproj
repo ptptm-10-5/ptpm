@@ -145,6 +145,13 @@
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap\js\jquery-3.3.1.min.js" />
     <Content Include="Content\Hinh\logo.png" />
+    <Content Include="Content\Images\anhbia.jpg" />
+    <Content Include="Content\Images\contact-123website.jpg" />
+    <Content Include="Content\Images\iframe1.png" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\map.png" />
+    <Content Include="Content\Images\searchicon.png" />
+    <Content Include="Content\Images\shipping.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
