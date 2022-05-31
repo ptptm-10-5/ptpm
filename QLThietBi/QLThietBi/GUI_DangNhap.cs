@@ -25,11 +25,12 @@ namespace QLThietBi
         private void GUI_DangNhap_Load(object sender, EventArgs e)
         {
             dbLinhKien = new QL_LinhKienDataContext();
-            bllTaiKhoang = new BLL_TaiKhoang();
+            bllTaiKhoang = new BLL_TaiKhoang();            
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            
             if (string.IsNullOrEmpty(txtTenTK.Text))
             {
                 MessageBox.Show("Không được bỏ trống tên  tài khoảng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -61,6 +62,12 @@ namespace QLThietBi
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void GUI_DangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnDangNhap_Click(sender, e);
         }
 
         

@@ -147,6 +147,7 @@
             this.cơSơToolStripMenuItem.Name = "cơSơToolStripMenuItem";
             this.cơSơToolStripMenuItem.Size = new System.Drawing.Size(189, 28);
             this.cơSơToolStripMenuItem.Text = "Cơ Sở";
+            this.cơSơToolStripMenuItem.Click += new System.EventHandler(this.cơSơToolStripMenuItem_Click);
             // 
             // hoaĐơnToolStripMenuItem
             // 

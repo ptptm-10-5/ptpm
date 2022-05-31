@@ -138,6 +138,7 @@
             this.Name = "GUI_DangNhap";
             this.Text = "GUI_DangNhap";
             this.Load += new System.EventHandler(this.GUI_DangNhap_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GUI_DangNhap_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

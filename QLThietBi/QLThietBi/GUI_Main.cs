@@ -22,6 +22,29 @@ namespace QLThietBi
             IsMdiContainer = true;
         }
 
+        private Form kiemtratontai(Type formtype)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == formtype)
+                    return f;
+            }
+            return null;
+        }
+
+        private void cơSơToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = kiemtratontai(typeof(GUI_CoSo));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                GUI_CoSo fr = new GUI_CoSo();
+                fr.MdiParent = this;
+                fr.Show();
+            }
+        }
+
        
     }
 }
