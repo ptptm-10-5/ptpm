@@ -1,0 +1,16 @@
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\bin\Debug\QLThietBi.exe.config
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\bin\Debug\QLThietBi.exe
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\bin\Debug\QLThietBi.pdb
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\bin\Debug\BLL_QLThietBi.dll
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\bin\Debug\DTO_QLThietBi.dll
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\bin\Debug\DAL_QLThietBi.dll
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\bin\Debug\BLL_QLThietBi.pdb
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\bin\Debug\DTO_QLThietBi.pdb
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\bin\Debug\DAL_QLThietBi.pdb
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\obj\Debug\QLThietBi.csprojResolveAssemblyReference.cache
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\obj\Debug\QLThietBi.GUI_DangNhap.resources
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\obj\Debug\QLThietBi.GUI_Main.resources
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Properties.Resources.resources
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\obj\Debug\QLThietBi.csproj.GenerateResource.Cache
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\obj\Debug\QLThietBi.exe
+E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\QLThietBi\obj\Debug\QLThietBi.pdb
