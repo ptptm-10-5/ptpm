@@ -8,22 +8,6 @@
       <Association Name="NHANVIEN_BAOCAO" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.THIETBI" Member="THIETBIs">
-    <Type Name="THIETBI">
-      <Column Name="MATB" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TENTB" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="HINHANH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="GIA" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MOTA" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="MALOAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MANCC" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="THIETBI_CTDONHANG" Member="CTDONHANGs" ThisKey="MATB" OtherKey="MATB" Type="CTDONHANG" />
-      <Association Name="THIETBI_CTDONHAP" Member="CTDONHAPs" ThisKey="MATB" OtherKey="MATB" Type="CTDONHAP" />
-      <Association Name="LOAITB_THIETBI" Member="LOAITB" ThisKey="MALOAI" OtherKey="MALOAI" Type="LOAITB" IsForeignKey="true" />
-      <Association Name="NHACC_THIETBI" Member="NHACC" ThisKey="MANCC" OtherKey="MANCC" Type="NHACC" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.COSO" Member="COSOs">
     <Type Name="COSO">
       <Column Name="MACS" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -40,8 +24,8 @@
       <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="GIABAN" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="THANHTIEN" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Association Name="THIETBI_CTDONHANG" Member="THIETBI" ThisKey="MATB" OtherKey="MATB" Type="THIETBI" IsForeignKey="true" />
       <Association Name="DONHANG_CTDONHANG" Member="DONHANG" ThisKey="MADH" OtherKey="MADH" Type="DONHANG" IsForeignKey="true" />
+      <Association Name="THIETBI_CTDONHANG" Member="THIETBI" ThisKey="MATB" OtherKey="MATB" Type="THIETBI" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CTDONHAP" Member="CTDONHAPs">
@@ -51,8 +35,8 @@
       <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="GIANHAP" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="THANHTIEN" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Association Name="THIETBI_CTDONHAP" Member="THIETBI" ThisKey="MATB" OtherKey="MATB" Type="THIETBI" IsForeignKey="true" />
       <Association Name="DONNHAP_CTDONHAP" Member="DONNHAP" ThisKey="MADN" OtherKey="MADN" Type="DONNHAP" IsForeignKey="true" />
+      <Association Name="THIETBI_CTDONHAP" Member="THIETBI" ThisKey="MATB" OtherKey="MATB" Type="THIETBI" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DONHANG" Member="DONHANGs">
@@ -107,8 +91,8 @@
       <Column Name="TENNCC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
       <Column Name="DIACHI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="NHACC_THIETBI" Member="THIETBIs" ThisKey="MANCC" OtherKey="MANCC" Type="THIETBI" />
       <Association Name="NHACC_DONNHAP" Member="DONNHAPs" ThisKey="MANCC" OtherKey="MANCC" Type="DONNHAP" />
+      <Association Name="NHACC_THIETBI" Member="THIETBIs" ThisKey="MANCC" OtherKey="MANCC" Type="THIETBI" />
     </Type>
   </Table>
   <Table Name="dbo.NHANVIEN" Member="NHANVIENs">
@@ -131,6 +115,22 @@
       <Column Name="MATKHAU" Type="System.String" DbType="NChar(36)" CanBeNull="true" />
       <Column Name="MANV" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="NHANVIEN_TAIKHOANG" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THIETBI" Member="THIETBIs">
+    <Type Name="THIETBI">
+      <Column Name="MATB" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENTB" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="GIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MOTA" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="MALOAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MANCC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="THIETBI_CTDONHANG" Member="CTDONHANGs" ThisKey="MATB" OtherKey="MATB" Type="CTDONHANG" />
+      <Association Name="THIETBI_CTDONHAP" Member="CTDONHAPs" ThisKey="MATB" OtherKey="MATB" Type="CTDONHAP" />
+      <Association Name="LOAITB_THIETBI" Member="LOAITB" ThisKey="MALOAI" OtherKey="MALOAI" Type="LOAITB" IsForeignKey="true" />
+      <Association Name="NHACC_THIETBI" Member="NHACC" ThisKey="MANCC" OtherKey="MANCC" Type="NHACC" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

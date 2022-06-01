@@ -122,8 +122,10 @@
             // 
             // GUI_DangNhap
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(691, 415);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

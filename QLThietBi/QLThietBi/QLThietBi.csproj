@@ -45,34 +45,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI_CoSo.cs">
+    <Compile Include="Presentation\GUI_CoSo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CoSo.Designer.cs">
+    <Compile Include="Presentation\GUI_CoSo.Designer.cs">
       <DependentUpon>GUI_CoSo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_DangNhap.cs">
+    <Compile Include="Presentation\GUI_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_DangNhap.Designer.cs">
+    <Compile Include="Presentation\GUI_DangNhap.Designer.cs">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_Main.cs">
+    <Compile Include="Presentation\GUI_KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_Main.Designer.cs">
+    <Compile Include="Presentation\GUI_KhachHang.Designer.cs">
+      <DependentUpon>GUI_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\GUI_Loai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\GUI_Loai.Designer.cs">
+      <DependentUpon>GUI_Loai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\GUI_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\GUI_Main.Designer.cs">
       <DependentUpon>GUI_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\GUI_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\GUI_NhanVien.Designer.cs">
+      <DependentUpon>GUI_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\GUI_ThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\GUI_ThietBi.Designer.cs">
+      <DependentUpon>GUI_ThietBi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI_CoSo.resx">
+    <EmbeddedResource Include="Presentation\GUI_CoSo.resx">
       <DependentUpon>GUI_CoSo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_DangNhap.resx">
+    <EmbeddedResource Include="Presentation\GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_Main.resx">
+    <EmbeddedResource Include="Presentation\GUI_KhachHang.resx">
+      <DependentUpon>GUI_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\GUI_Loai.resx">
+      <DependentUpon>GUI_Loai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\GUI_Main.resx">
       <DependentUpon>GUI_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\GUI_NhanVien.resx">
+      <DependentUpon>GUI_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\GUI_ThietBi.resx">
+      <DependentUpon>GUI_ThietBi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +142,14 @@
       <Name>DTO_QLThietBi</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\delete_Image.png" />
+    <Content Include="Image\edit-image.png" />
+    <Content Include="Image\image.png" />
+    <Content Include="Image\insert_Image.png" />
+    <Content Include="Image\insert_picture.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

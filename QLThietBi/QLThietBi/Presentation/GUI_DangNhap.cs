@@ -20,6 +20,8 @@ namespace QLThietBi
         public GUI_DangNhap()
         {
             InitializeComponent();
+            this.AcceptButton = btnDangNhap;
+            this.CancelButton = btnThoat;
         }
 
         private void GUI_DangNhap_Load(object sender, EventArgs e)
@@ -65,9 +67,7 @@ namespace QLThietBi
         }
 
         private void GUI_DangNhap_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                btnDangNhap_Click(sender, e);
+        {            
         }
 
         

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_QLThietBi", "DAL_QLThie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO_QLThietBi", "DTO_QLThietBi\DTO_QLThietBi.csproj", "{6FD38D0F-AC3C-40B5-90FD-2627EECFECEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Export", "Export\Export.csproj", "{9F0E3370-CFAF-4954-8F95-C5679D3D3245}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6FD38D0F-AC3C-40B5-90FD-2627EECFECEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FD38D0F-AC3C-40B5-90FD-2627EECFECEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FD38D0F-AC3C-40B5-90FD-2627EECFECEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0E3370-CFAF-4954-8F95-C5679D3D3245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0E3370-CFAF-4954-8F95-C5679D3D3245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0E3370-CFAF-4954-8F95-C5679D3D3245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0E3370-CFAF-4954-8F95-C5679D3D3245}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

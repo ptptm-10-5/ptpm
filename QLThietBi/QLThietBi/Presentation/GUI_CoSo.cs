@@ -72,6 +72,7 @@ namespace QLThietBi
                 {
                     MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loadCoSo();
+                    clear();
                 }
             }    
         }
@@ -102,6 +103,18 @@ namespace QLThietBi
             txtTen.Text = dtgCoSo.CurrentRow.Cells[1].Value.ToString();
             txtSDT.Text = dtgCoSo.CurrentRow.Cells[2].Value.ToString();
             txtDiaChi.Text = dtgCoSo.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        void clear()
+        {
+            txtMa.Clear();
+            txtTen.Clear();
+            txtSDT.Clear();
+            txtDiaChi.Clear();
+        }
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

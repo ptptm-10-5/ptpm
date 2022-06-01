@@ -5,3 +5,10 @@ E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\DAL_QLThietBi\bin\D
 E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\DAL_QLThietBi\obj\Debug\DAL_QLThietBi.csprojResolveAssemblyReference.cache
 E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\DAL_QLThietBi\obj\Debug\DAL_QLThietBi.dll
 E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\DAL_QLThietBi\obj\Debug\DAL_QLThietBi.pdb
+D:\GitHub\PTPM\ptpm\QLThietBi\DAL_QLThietBi\bin\Debug\DAL_QLThietBi.dll
+D:\GitHub\PTPM\ptpm\QLThietBi\DAL_QLThietBi\bin\Debug\DAL_QLThietBi.pdb
+D:\GitHub\PTPM\ptpm\QLThietBi\DAL_QLThietBi\bin\Debug\DTO_QLThietBi.dll
+D:\GitHub\PTPM\ptpm\QLThietBi\DAL_QLThietBi\bin\Debug\DTO_QLThietBi.pdb
+D:\GitHub\PTPM\ptpm\QLThietBi\DAL_QLThietBi\obj\Debug\DAL_QLThietBi.csprojResolveAssemblyReference.cache
+D:\GitHub\PTPM\ptpm\QLThietBi\DAL_QLThietBi\obj\Debug\DAL_QLThietBi.dll
+D:\GitHub\PTPM\ptpm\QLThietBi\DAL_QLThietBi\obj\Debug\DAL_QLThietBi.pdb

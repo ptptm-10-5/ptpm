@@ -36,14 +36,14 @@
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.dtgCoSo = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMa = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
-            this.dtgCoSo = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMa = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCoSo)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(412, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 39);
+            this.label1.Size = new System.Drawing.Size(129, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "CƠ SỞ";
             // 
@@ -119,6 +119,34 @@
             this.txtDiaChi.Size = new System.Drawing.Size(222, 74);
             this.txtDiaChi.TabIndex = 2;
             // 
+            // dtgCoSo
+            // 
+            this.dtgCoSo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgCoSo.Location = new System.Drawing.Point(47, 419);
+            this.dtgCoSo.Name = "dtgCoSo";
+            this.dtgCoSo.RowTemplate.Height = 24;
+            this.dtgCoSo.Size = new System.Drawing.Size(932, 352);
+            this.dtgCoSo.TabIndex = 4;
+            this.dtgCoSo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCoSo_CellClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(115, 137);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Mã Cơ Sở:";
+            // 
+            // txtMa
+            // 
+            this.txtMa.Location = new System.Drawing.Point(308, 137);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.ReadOnly = true;
+            this.txtMa.Size = new System.Drawing.Size(82, 30);
+            this.txtMa.TabIndex = 2;
+            // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,34 +200,7 @@
             this.btnExport.TabIndex = 3;
             this.btnExport.Text = "Export";
             this.btnExport.UseVisualStyleBackColor = true;
-            // 
-            // dtgCoSo
-            // 
-            this.dtgCoSo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgCoSo.Location = new System.Drawing.Point(47, 419);
-            this.dtgCoSo.Name = "dtgCoSo";
-            this.dtgCoSo.RowTemplate.Height = 24;
-            this.dtgCoSo.Size = new System.Drawing.Size(932, 352);
-            this.dtgCoSo.TabIndex = 4;
-            this.dtgCoSo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCoSo_CellClick);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(115, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Mã Cơ Sở:";
-            // 
-            // txtMa
-            // 
-            this.txtMa.Location = new System.Drawing.Point(308, 137);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.ReadOnly = true;
-            this.txtMa.Size = new System.Drawing.Size(82, 30);
-            this.txtMa.TabIndex = 2;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // GUI_CoSo
             // 
@@ -245,13 +246,13 @@
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.DataGridView dtgCoSo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.DataGridView dtgCoSo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMa;
     }
 }
