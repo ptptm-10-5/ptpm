@@ -7,3 +7,15 @@ E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\BLL_QLThietBi\bin\D
 E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\BLL_QLThietBi\obj\Debug\BLL_QLThietBi.csprojResolveAssemblyReference.cache
 E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\BLL_QLThietBi\obj\Debug\BLL_QLThietBi.dll
 E:\LUUDULIEUSINHVIEN\HocKy_III\PhatTrien_PM\BaiTap\QLThietBi\BLL_QLThietBi\obj\Debug\BLL_QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\bin\Debug\BLL_QLThietBi.dll
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\bin\Debug\BLL_QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\bin\Debug\DAL_QLThietBi.dll
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\bin\Debug\DTO_QLThietBi.dll
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\bin\Debug\DAL_QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\bin\Debug\DTO_QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\bin\Debug\DTO_QLThietBi.dll.config
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\obj\Debug\BLL_QLThietBi.csprojAssemblyReference.cache
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\obj\Debug\BLL_QLThietBi.csproj.CoreCompileInputs.cache
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\obj\Debug\BLL_QLThietBi.csproj.CopyComplete
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\obj\Debug\BLL_QLThietBi.dll
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\BLL_QLThietBi\obj\Debug\BLL_QLThietBi.pdb

@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHoaDonNhap.Designer.cs">
+      <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_CoSo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmHoaDonNhap.resx">
+      <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_CoSo.resx">
       <DependentUpon>GUI_CoSo.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +91,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -105,6 +115,65 @@
       <Project>{6fd38d0f-ac3c-40b5-90fd-2627eecfeceb}</Project>
       <Name>DTO_QLThietBi</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images16\Add.png" />
+    <Content Include="Images16\Back.png" />
+    <Content Include="Images16\Bar Chart.png" />
+    <Content Include="Images16\Calendar-icon.png" />
+    <Content Include="Images16\Close-2-icon.png" />
+    <Content Include="Images16\Comment.png" />
+    <Content Include="Images16\dangnhap %281%29.jpg" />
+    <Content Include="Images16\Database-Backup-icon.png" />
+    <Content Include="Images16\database-icon.png" />
+    <Content Include="Images16\Delete.png" />
+    <Content Include="Images16\dienthoai %281%29.png" />
+    <Content Include="Images16\dienthoai.jpg" />
+    <Content Include="Images16\Email.png" />
+    <Content Include="Images16\Exit.png" />
+    <Content Include="Images16\Finance-Purchase-Order-icon.png" />
+    <Content Include="Images16\HK.png" />
+    <Content Include="Images16\HK2.png" />
+    <Content Include="Images16\Info.png" />
+    <Content Include="Images16\laptop %281%29.png" />
+    <Content Include="Images16\Line Chart.png" />
+    <Content Include="Images16\Load.png" />
+    <Content Include="Images16\Loading.png" />
+    <Content Include="Images16\modify-key.png" />
+    <Content Include="Images16\Modify.png" />
+    <Content Include="Images16\moon-full-moon-icon.png" />
+    <Content Include="Images16\Moon-icon.png" />
+    <Content Include="Images16\moon-new-moon-icon.png" />
+    <Content Include="Images16\name-card-icon.png" />
+    <Content Include="Images16\NCC.png" />
+    <Content Include="Images16\Next.png" />
+    <Content Include="Images16\Picture.png" />
+    <Content Include="Images16\Pie Chart.png" />
+    <Content Include="Images16\Print-icon.png" />
+    <Content Include="Images16\Print.png" />
+    <Content Include="Images16\Profile.png" />
+    <Content Include="Images16\Save.png" />
+    <Content Include="Images16\Search.png" />
+    <Content Include="Images16\Server.jpg" />
+    <Content Include="Images16\Sex-Male-Female-icon.png" />
+    <Content Include="Images16\sort-ascending-icon.png" />
+    <Content Include="Images16\sort-descending-icon.png" />
+    <Content Include="Images16\Start-Menu-Search-icon.png" />
+    <Content Include="Images16\system-database-add-icon.png" />
+    <Content Include="Images16\System-Security-Reader-2-icon.png" />
+    <Content Include="Images16\tainghe.jpg" />
+    <Content Include="Images16\tainghepng %281%29.png" />
+    <Content Include="Images16\User-Group-icon.png" />
+    <Content Include="Images16\Warning.png" />
+    <Content Include="Images16\Window-Enter-icon.png" />
+    <None Include="Resources\sort-descending-icon.png" />
+    <None Include="Resources\sort-ascending-icon.png" />
+    <None Include="Resources\Close-2-icon.png" />
+    <None Include="Resources\Load.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Finance-Purchase-Order-icon.png" />
+    <None Include="Resources\Add1.png" />
+    <None Include="Resources\Add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

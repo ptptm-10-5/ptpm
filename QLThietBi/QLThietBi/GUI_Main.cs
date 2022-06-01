@@ -45,6 +45,17 @@ namespace QLThietBi
             }
         }
 
-       
+        private void hoaĐơnNhâpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = kiemtratontai(typeof(frmHoaDonNhap));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmHoaDonNhap fr = new frmHoaDonNhap();
+                fr.MdiParent = this;
+                fr.Show();
+            }
+        }
     }
 }
