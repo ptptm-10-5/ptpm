@@ -20,11 +20,15 @@ namespace DAL_QLThietBi
         {
             return db_LinhKien.CTDONHAPs.Select(t => t).ToList();
         }
+        public List<CTDONHAP> loadCTDonNhapTheMaDN(int pMaDN)
+        {
+            return db_LinhKien.CTDONHAPs.Select(t => t).Where(t => t.MADN == pMaDN).ToList();
+        }
         public int themCTDonNhap(CTDONHAP ctdn)
         {
             try
-            {
-                db_LinhKien.CTDONHAPs.InsertOnSubmit(ctdn);
+            {                
+                db_LinhKien.CTDONHAPs.InsertOnSubmit(ctdn);                
                 db_LinhKien.SubmitChanges();
                 return 1;
             }
@@ -76,17 +80,17 @@ namespace DAL_QLThietBi
                 return 0;
             }
         }
-        //public CTDonNhap timCTDonNhapTheoMa(int pMaCTDH)
-        //{
-        //    try
-        //    {
-        //        return db_LinhKien.CTDonNhaps.Select(t => t).Where(t => t.MADH == pMaCTDH).FirstOrDefault();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return null;
-        //    }
-        //}
+        public CTDONHAP timCTDonNhapTheoMaDNMaTB(int pMaDN, int pMaTB)
+        {
+            try
+            {
+                return db_LinhKien.CTDONHAPs.Select(t => t).Where(t => t.MADN == pMaDN && t.MATB == pMaTB).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
     }
 }

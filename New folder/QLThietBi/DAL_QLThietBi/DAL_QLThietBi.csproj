@@ -53,6 +53,8 @@
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_TaiKhoang.cs" />
     <Compile Include="DAL_ThietBi.cs" />
+    <Compile Include="DAL_VIEW_CTDonNhap.cs" />
+    <Compile Include="DAL_VIEW_Nhap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

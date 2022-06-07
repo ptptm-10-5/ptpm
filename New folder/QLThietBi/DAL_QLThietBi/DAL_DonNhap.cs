@@ -88,5 +88,21 @@ namespace DAL_QLThietBi
                 return null;
             }
         }
+        public int tinhTongThanhTien(int pMaDN)
+        {
+            try
+            {
+                DONNHAP dn = db_LinhKien.DONNHAPs.Select(t => t).Where(t => t.MADN == pMaDN).FirstOrDefault();
+                List<CTDONHAP> dsCTDN = new DAL_CTDonNhap().loadCTDonNhapTheMaDN(pMaDN);
+                dn.TONGTIEN = dsCTDN.Sum(t => t.THANHTIEN);
+                luuDonNhap();
+                return int.Parse( dn.TONGTIEN.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
     }
 }

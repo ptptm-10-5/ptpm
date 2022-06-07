@@ -26,8 +26,8 @@ namespace DTO_QLThietBi.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QDRGJQ8\\SQLEXPRESS;Initial Catalog=QL_THIETBI;User ID=sa;Pass" +
-            "word=123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-8FOJEEQ\\TUNGINSPR15;Initial Catalog=QL_THIETBI;User ID=sa;Pas" +
+            "sword=123")]
         public string QL_THIETBIConnectionString {
             get {
                 return ((string)(this["QL_THIETBIConnectionString"]));

@@ -30,12 +30,21 @@ namespace QLThietBi
             loadCB();
             loadCT();
         }
+        void suaDT()
+        {
+            //dtDonNhap.Columns[1].Visible = false;
+            //dtDonNhap.Columns[0].Visible = false;
+            
+        }
+
         public void loadCT()
         {
             if (cboMaDonNhap.SelectedValue.ToString() != "DTO.DONNHAP")
             {
                 int manhap = ((View_Nhap)cboMaDonNhap.SelectedValue).MADN; //int.Parse(cboMaDonNhap.SelectedValue.ToString());
                 dtCTDonNhap.DataSource = bllctdonnhap.loadCTDonNhapMa(manhap);
+                dtCTDonNhap.Columns[0].Visible = false;
+                dtCTDonNhap.Columns[1].Visible = false;
             }
         }
         public void loadCB()
@@ -59,6 +68,7 @@ namespace QLThietBi
         void loadDonNhap()
         {
             dtDonNhap.DataSource = blldonnhap.loadViewDonNhap();
+            suaDT();
         }
         private void dtDonNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {

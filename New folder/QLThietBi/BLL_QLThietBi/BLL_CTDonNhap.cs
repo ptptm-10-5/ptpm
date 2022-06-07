@@ -23,6 +23,10 @@ namespace BLL_QLThietBi
         {
             return dalCTDonNhap.loadCTDonNhap();
         }
+        public List<CTDONHAP> loadCTDonNhapTheMaDN(int pMaDN)
+        {
+            return dalCTDonNhap.loadCTDonNhapTheMaDN(pMaDN);
+        }
         public int themCTDonNhap(CTDONHAP ctdn)
         {
             return dalCTDonNhap.themCTDonNhap(ctdn);
@@ -39,9 +43,9 @@ namespace BLL_QLThietBi
         {
             return dalCTDonNhap.luuCTDonNhap();
         }
-        //public CTDONHAP timCTDonNhapTheoMa(int pMactdn)
-        //{
-        //    return dalCTDonNhap.timCTDonNhapTheoMa(pMactdn);
-        //}
+        public CTDONHAP timCTDonNhapTheoMaDNMaTB(int pMaDN, int pMaTB)
+        {
+            return dalCTDonNhap.timCTDonNhapTheoMaDNMaTB(pMaDN, pMaTB);
+        }
     }
 }

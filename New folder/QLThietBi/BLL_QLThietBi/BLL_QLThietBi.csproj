@@ -53,6 +53,8 @@
     <Compile Include="BLL_NhanVien.cs" />
     <Compile Include="BLL_TaiKhoang.cs" />
     <Compile Include="BLL_ThietBi.cs" />
+    <Compile Include="BLL_View_CTNhap.cs" />
+    <Compile Include="BLL_View_DonNhap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

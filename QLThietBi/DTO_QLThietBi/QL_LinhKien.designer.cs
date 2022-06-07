@@ -33,6 +33,9 @@ namespace DTO_QLThietBi
     partial void InsertBAOCAO(BAOCAO instance);
     partial void UpdateBAOCAO(BAOCAO instance);
     partial void DeleteBAOCAO(BAOCAO instance);
+    partial void InsertTKKH(TKKH instance);
+    partial void UpdateTKKH(TKKH instance);
+    partial void DeleteTKKH(TKKH instance);
     partial void InsertCOSO(COSO instance);
     partial void UpdateCOSO(COSO instance);
     partial void DeleteCOSO(COSO instance);
@@ -66,7 +69,7 @@ namespace DTO_QLThietBi
     #endregion
 		
 		public QL_LinhKienDataContext() : 
-				base(global::DTO_QLThietBi.Properties.Settings.Default.QL_THIETBIConnectionString1, mappingSource)
+				base(global::DTO_QLThietBi.Properties.Settings.Default.QL_THIETBIConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -103,11 +106,11 @@ namespace DTO_QLThietBi
 			}
 		}
 		
-		public System.Data.Linq.Table<TAIKHOANG> TAIKHOANGs
+		public System.Data.Linq.Table<TKKH> TKKHs
 		{
 			get
 			{
-				return this.GetTable<TAIKHOANG>();
+				return this.GetTable<TKKH>();
 			}
 		}
 		
@@ -183,6 +186,14 @@ namespace DTO_QLThietBi
 			}
 		}
 		
+		public System.Data.Linq.Table<TAIKHOANG> TAIKHOANGs
+		{
+			get
+			{
+				return this.GetTable<TAIKHOANG>();
+			}
+		}
+		
 		public System.Data.Linq.Table<THIETBI> THIETBIs
 		{
 			get
@@ -191,19 +202,19 @@ namespace DTO_QLThietBi
 			}
 		}
 		
-		public System.Data.Linq.Table<View_Nhap> View_Nhaps
-		{
-			get
-			{
-				return this.GetTable<View_Nhap>();
-			}
-		}
-		
 		public System.Data.Linq.Table<View_CTNhap> View_CTNhaps
 		{
 			get
 			{
 				return this.GetTable<View_CTNhap>();
+			}
+		}
+		
+		public System.Data.Linq.Table<View_Nhap> View_Nhaps
+		{
+			get
+			{
+				return this.GetTable<View_Nhap>();
 			}
 		}
 		
@@ -367,65 +378,177 @@ namespace DTO_QLThietBi
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TAIKHOANG")]
-	public partial class TAIKHOANG
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TKKH")]
+	public partial class TKKH : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
-		private string _TENTK;
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _MATKHAU;
+		private int _MaTK;
 		
-		private System.Nullable<int> _MANV;
+		private System.Nullable<int> _MAKH;
 		
-		public TAIKHOANG()
+		private string _TaiKhoan;
+		
+		private string _MaKhau;
+		
+		private EntityRef<KHACHHANG> _KHACHHANG;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaTKChanging(int value);
+    partial void OnMaTKChanged();
+    partial void OnMAKHChanging(System.Nullable<int> value);
+    partial void OnMAKHChanged();
+    partial void OnTaiKhoanChanging(string value);
+    partial void OnTaiKhoanChanged();
+    partial void OnMaKhauChanging(string value);
+    partial void OnMaKhauChanged();
+    #endregion
+		
+		public TKKH()
 		{
+			this._KHACHHANG = default(EntityRef<KHACHHANG>);
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTK", DbType="NChar(36)")]
-		public string TENTK
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaTK", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MaTK
 		{
 			get
 			{
-				return this._TENTK;
+				return this._MaTK;
 			}
 			set
 			{
-				if ((this._TENTK != value))
+				if ((this._MaTK != value))
 				{
-					this._TENTK = value;
+					this.OnMaTKChanging(value);
+					this.SendPropertyChanging();
+					this._MaTK = value;
+					this.SendPropertyChanged("MaTK");
+					this.OnMaTKChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="NChar(36)")]
-		public string MATKHAU
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKH", DbType="Int")]
+		public System.Nullable<int> MAKH
 		{
 			get
 			{
-				return this._MATKHAU;
+				return this._MAKH;
 			}
 			set
 			{
-				if ((this._MATKHAU != value))
+				if ((this._MAKH != value))
 				{
-					this._MATKHAU = value;
+					if (this._KHACHHANG.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMAKHChanging(value);
+					this.SendPropertyChanging();
+					this._MAKH = value;
+					this.SendPropertyChanged("MAKH");
+					this.OnMAKHChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MANV", DbType="Int")]
-		public System.Nullable<int> MANV
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaiKhoan", DbType="NVarChar(30)")]
+		public string TaiKhoan
 		{
 			get
 			{
-				return this._MANV;
+				return this._TaiKhoan;
 			}
 			set
 			{
-				if ((this._MANV != value))
+				if ((this._TaiKhoan != value))
 				{
-					this._MANV = value;
+					this.OnTaiKhoanChanging(value);
+					this.SendPropertyChanging();
+					this._TaiKhoan = value;
+					this.SendPropertyChanged("TaiKhoan");
+					this.OnTaiKhoanChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKhau", DbType="NVarChar(30)")]
+		public string MaKhau
+		{
+			get
+			{
+				return this._MaKhau;
+			}
+			set
+			{
+				if ((this._MaKhau != value))
+				{
+					this.OnMaKhauChanging(value);
+					this.SendPropertyChanging();
+					this._MaKhau = value;
+					this.SendPropertyChanged("MaKhau");
+					this.OnMaKhauChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_TKKH", Storage="_KHACHHANG", ThisKey="MAKH", OtherKey="MAKH", IsForeignKey=true)]
+		public KHACHHANG KHACHHANG
+		{
+			get
+			{
+				return this._KHACHHANG.Entity;
+			}
+			set
+			{
+				KHACHHANG previousValue = this._KHACHHANG.Entity;
+				if (((previousValue != value) 
+							|| (this._KHACHHANG.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._KHACHHANG.Entity = null;
+						previousValue.TKKHs.Remove(this);
+					}
+					this._KHACHHANG.Entity = value;
+					if ((value != null))
+					{
+						value.TKKHs.Add(this);
+						this._MAKH = value.MAKH;
+					}
+					else
+					{
+						this._MAKH = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("KHACHHANG");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -1739,6 +1862,8 @@ namespace DTO_QLThietBi
 		
 		private string _DIACHI;
 		
+		private EntitySet<TKKH> _TKKHs;
+		
 		private EntitySet<DONHANG> _DONHANGs;
 		
     #region Extensibility Method Definitions
@@ -1761,6 +1886,7 @@ namespace DTO_QLThietBi
 		
 		public KHACHHANG()
 		{
+			this._TKKHs = new EntitySet<TKKH>(new Action<TKKH>(this.attach_TKKHs), new Action<TKKH>(this.detach_TKKHs));
 			this._DONHANGs = new EntitySet<DONHANG>(new Action<DONHANG>(this.attach_DONHANGs), new Action<DONHANG>(this.detach_DONHANGs));
 			OnCreated();
 		}
@@ -1885,6 +2011,19 @@ namespace DTO_QLThietBi
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_TKKH", Storage="_TKKHs", ThisKey="MAKH", OtherKey="MAKH")]
+		public EntitySet<TKKH> TKKHs
+		{
+			get
+			{
+				return this._TKKHs;
+			}
+			set
+			{
+				this._TKKHs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_DONHANG", Storage="_DONHANGs", ThisKey="MAKH", OtherKey="MAKH")]
 		public EntitySet<DONHANG> DONHANGs
 		{
@@ -1916,6 +2055,18 @@ namespace DTO_QLThietBi
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_TKKHs(TKKH entity)
+		{
+			this.SendPropertyChanging();
+			entity.KHACHHANG = this;
+		}
+		
+		private void detach_TKKHs(TKKH entity)
+		{
+			this.SendPropertyChanging();
+			entity.KHACHHANG = null;
 		}
 		
 		private void attach_DONHANGs(DONHANG entity)
@@ -2501,6 +2652,69 @@ namespace DTO_QLThietBi
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TAIKHOANG")]
+	public partial class TAIKHOANG
+	{
+		
+		private string _TENTK;
+		
+		private string _MATKHAU;
+		
+		private System.Nullable<int> _MANV;
+		
+		public TAIKHOANG()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTK", DbType="NChar(36)")]
+		public string TENTK
+		{
+			get
+			{
+				return this._TENTK;
+			}
+			set
+			{
+				if ((this._TENTK != value))
+				{
+					this._TENTK = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="NChar(36)")]
+		public string MATKHAU
+		{
+			get
+			{
+				return this._MATKHAU;
+			}
+			set
+			{
+				if ((this._MATKHAU != value))
+				{
+					this._MATKHAU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MANV", DbType="Int")]
+		public System.Nullable<int> MANV
+		{
+			get
+			{
+				return this._MANV;
+			}
+			set
+			{
+				if ((this._MANV != value))
+				{
+					this._MANV = value;
+				}
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THIETBI")]
 	public partial class THIETBI : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2869,105 +3083,6 @@ namespace DTO_QLThietBi
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_Nhap")]
-	public partial class View_Nhap
-	{
-		
-		private int _MADN;
-		
-		private string _TENNV;
-		
-		private string _TENNCC;
-		
-		private System.Nullable<System.DateTime> _NGAYLAP;
-		
-		private System.Nullable<decimal> _TONGTIEN;
-		
-		public View_Nhap()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MADN", DbType="Int NOT NULL")]
-		public int MADN
-		{
-			get
-			{
-				return this._MADN;
-			}
-			set
-			{
-				if ((this._MADN != value))
-				{
-					this._MADN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNV", DbType="NVarChar(50)")]
-		public string TENNV
-		{
-			get
-			{
-				return this._TENNV;
-			}
-			set
-			{
-				if ((this._TENNV != value))
-				{
-					this._TENNV = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNCC", DbType="NVarChar(100)")]
-		public string TENNCC
-		{
-			get
-			{
-				return this._TENNCC;
-			}
-			set
-			{
-				if ((this._TENNCC != value))
-				{
-					this._TENNCC = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYLAP", DbType="Date")]
-		public System.Nullable<System.DateTime> NGAYLAP
-		{
-			get
-			{
-				return this._NGAYLAP;
-			}
-			set
-			{
-				if ((this._NGAYLAP != value))
-				{
-					this._NGAYLAP = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TONGTIEN", DbType="Money")]
-		public System.Nullable<decimal> TONGTIEN
-		{
-			get
-			{
-				return this._TONGTIEN;
-			}
-			set
-			{
-				if ((this._TONGTIEN != value))
-				{
-					this._TONGTIEN = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_CTNhap")]
 	public partial class View_CTNhap
 	{
@@ -3098,6 +3213,105 @@ namespace DTO_QLThietBi
 				if ((this._THANHTIEN != value))
 				{
 					this._THANHTIEN = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_Nhap")]
+	public partial class View_Nhap
+	{
+		
+		private int _MADN;
+		
+		private string _TENNV;
+		
+		private string _TENNCC;
+		
+		private System.Nullable<System.DateTime> _NGAYLAP;
+		
+		private System.Nullable<decimal> _TONGTIEN;
+		
+		public View_Nhap()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MADN", DbType="Int NOT NULL")]
+		public int MADN
+		{
+			get
+			{
+				return this._MADN;
+			}
+			set
+			{
+				if ((this._MADN != value))
+				{
+					this._MADN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNV", DbType="NVarChar(50)")]
+		public string TENNV
+		{
+			get
+			{
+				return this._TENNV;
+			}
+			set
+			{
+				if ((this._TENNV != value))
+				{
+					this._TENNV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENNCC", DbType="NVarChar(100)")]
+		public string TENNCC
+		{
+			get
+			{
+				return this._TENNCC;
+			}
+			set
+			{
+				if ((this._TENNCC != value))
+				{
+					this._TENNCC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYLAP", DbType="Date")]
+		public System.Nullable<System.DateTime> NGAYLAP
+		{
+			get
+			{
+				return this._NGAYLAP;
+			}
+			set
+			{
+				if ((this._NGAYLAP != value))
+				{
+					this._NGAYLAP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TONGTIEN", DbType="Money")]
+		public System.Nullable<decimal> TONGTIEN
+		{
+			get
+			{
+				return this._TONGTIEN;
+			}
+			set
+			{
+				if ((this._TONGTIEN != value))
+				{
+					this._TONGTIEN = value;
 				}
 			}
 		}
