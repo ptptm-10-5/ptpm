@@ -53,7 +53,7 @@ namespace TinHocNgoiSao.Controllers
         {
             string ten = co["txtTendn"];
             string matkhau = co["txtPass"];
-            TKKH kh = data.TKKHs.SingleOrDefault(k => k.TaiKhoan == ten && k.MaKhau == matkhau);
+            KHACHHANG kh = data.KHACHHANGs.SingleOrDefault(k => k.TaiKhoan == ten && k.MatKhau == matkhau);
             if (kh == null)
             {
                 return View();
@@ -71,6 +71,82 @@ namespace TinHocNgoiSao.Controllers
         {
             GioHang gh = (GioHang)Session["gh"];
             return View(gh);
+        }
+        public ActionResult ThemMatHang(int id)
+        {
+            GioHang gh = (GioHang)Session["gh"];
+            if (gh == null)
+            {
+                gh = new GioHang();
+            }
+            gh.Them(id);
+            Session["gh"] = gh;
+
+            return RedirectToAction("Home", "TinHocNgoiSao");
+
+        }
+        public ActionResult XoaMatHang(int id)
+        {
+            GioHang gh = (GioHang)Session["gh"];
+            if (gh == null)
+            {
+                gh = new GioHang();
+            }
+            gh.Xoa(id);
+            Session["gh"] = gh;
+
+            return RedirectToAction("XemGioHang", "TinHocNgoiSao");
+
+        }
+        public ActionResult XoaGioHang()
+        {
+            GioHang gh = (GioHang)Session["gh"];
+            if (gh == null)
+            {
+                gh = new GioHang();
+            }
+            gh.XoaGioHang();
+            Session["gh"] = gh;
+
+            return RedirectToAction("XemGioHang", "TinHocNgoiSao");
+
+        }
+        public ActionResult XacNhanDongHang()
+        {
+            KHACHHANG kh = Session["khachhang"] as KHACHHANG;
+            if (kh == null)
+            {
+                return RedirectToAction("DangNhap", "TinHocNgoiSao");
+            }
+            return View(kh);
+        }
+        [HttpPost]
+        public ActionResult LuuDatHang(FormCollection co)
+        {
+            GioHang gh = (GioHang)Session["gh"];
+            KHACHHANG kh = (KHACHHANG)Session["khachhang"];
+            if (Session["khachhang"] == null)
+                return RedirectToAction("Home", "TinHocNgoiSao");
+            if (Session["gh"] == null || gh.lst.Count == 0)
+                return RedirectToAction("XemGioHang", "TinHocNgoiSao");
+            string ngaygiao = co["txtDate"];
+
+            DONHANG hd = new DONHANG();
+            hd.MAKH = kh.MAKH;
+            hd.NGAYLAP = DateTime.Now;
+            data.DONHANGs.InsertOnSubmit(hd);
+            data.SubmitChanges();
+            foreach (CartItem sp in gh.lst)
+            {
+                CTDONHANG ct = new CTDONHANG();
+                ct.MADH = hd.MADH;
+                ct.MATB = sp.iMaSP;
+                ct.SOLUONG = sp.iSoLuong;
+                data.CTDONHANGs.InsertOnSubmit(ct);
+            }
+            data.SubmitChanges();
+            gh.XoaGioHang();
+            return View();
         }
     }
 }

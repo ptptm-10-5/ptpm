@@ -381,6 +381,8 @@
     <Content Include="Views\TinHocNgoiSao\DangXuat.cshtml" />
     <Content Include="Views\TinHocNgoiSao\DangNhap.cshtml" />
     <Content Include="Views\TinHocNgoiSao\XemGioHang.cshtml" />
+    <Content Include="Views\TinHocNgoiSao\XacNhanDongHang.cshtml" />
+    <Content Include="Views\TinHocNgoiSao\LuuDatHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

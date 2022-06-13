@@ -37,12 +37,12 @@
             <!--header-middle-->
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="pull-left">
                             <a href="/TinHocNgoiSao/Home"><img src="~/Content/Hinh/logo.png" style="width:210px;height:80px" /></a>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <div class="pull-left">
                             <ul class="nav nav-navbar">
                                 <li>
@@ -62,15 +62,28 @@
                                     <a style="font-weight:bold">19002403 (8:30 - 21:00)</a>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-shopping-cart"></i>GIỎ HÀNG
-                                    @{
-                                        if (Session["khachhang"] != null)
-                                        {
-                                            var k = Session["khachhang"] as TKKH;
-                                            <a href="/TinHocNgoiSao/DangXuat">Đăng Xuất</a>
-                                            <p>Chào bạn, @k.TaiKhoan</p>
+                                    <a href="/TinHocNgoiSao/XemGioHang">
+                                        <i class="fa fa-shopping-cart"></i>GIỎ HÀNG
+                                        @{
+                                            GioHang g = Session["gh"] as GioHang;
+                                            if (g != null)
+                                            {
+                                                <text>(@g.SoMatHang())</text>
+                                            }
+                                            else
+                                            {
+                                                <span>(0)</span>
+                                            }
+                                        }<br />
+                                        @{
+                                            if (Session["khachhang"] != null)
+                                            {
+                                                var k = Session["khachhang"] as KHACHHANG;
+                                                <a href="/TinHocNgoiSao/DangXuat">Đăng Xuất</a>
+                                                <p>Chào bạn, @k.TaiKhoan</p>
+                                            }
                                         }
-                                    }</a>
+                                    </a>
                                 </li>
                                 <li><i class="fa fa-user"></i></li>
                                 <li>
@@ -94,17 +107,17 @@
                     <div class="align-items-center">
                         <ul class="nav">
                             <li class="nav-item  btn-outline-warning">
-                                <a class="nav-link mt-1" href="/StoreManager/Home" style="color:white">TRANG CHỦ</a>
+                                <a class="nav-link mt-1" href="#" style="color:white">TRANG CHỦ</a>
                             </li>
                             <li class="nav-item  btn-outline-warning">
-                                <a class="nav-link mt-1" href="/StoreManager/Home" style="color:white">LẮP ĐẶT PHÒNG NET</a>
+                                <a class="nav-link mt-1" href="#" style="color:white">LẮP ĐẶT PHÒNG NET</a>
                             </li>
 
                             <li class="nav-item  btn-outline-warning">
-                                <a class="nav-link mt-1" href="/StoreManager/Blog" style="color:white">TRẢ GÓP</a>
+                                <a class="nav-link mt-1" href="#" style="color:white">TRẢ GÓP</a>
                             </li>
                             <li class="nav-item  btn-outline-warning">
-                                <a class="nav-link mt-1" href="~/StoreManager/Support" style="color:white">BẢNG GIÁ</a>
+                                <a class="nav-link mt-1" href="#" style="color:white">BẢNG GIÁ</a>
                             </li>
                             <li class="nav-item  btn-outline-warning">
                                 <a class="nav-link mt-1" href="#" style="color:white">XÂY DỰNG CẤU HÌNH </a>
