@@ -63,9 +63,6 @@ namespace TinHocNgoiSao.Models
     partial void InsertNHANVIEN(NHANVIEN instance);
     partial void UpdateNHANVIEN(NHANVIEN instance);
     partial void DeleteNHANVIEN(NHANVIEN instance);
-    partial void InsertTKKH(TKKH instance);
-    partial void UpdateTKKH(TKKH instance);
-    partial void DeleteTKKH(TKKH instance);
     #endregion
 		
 		public QL_LinhKienDataContext() : 
@@ -191,14 +188,6 @@ namespace TinHocNgoiSao.Models
 			get
 			{
 				return this.GetTable<TAIKHOANG>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TKKH> TKKHs
-		{
-			get
-			{
-				return this.GetTable<TKKH>();
 			}
 		}
 	}
@@ -380,8 +369,6 @@ namespace TinHocNgoiSao.Models
 		
 		private EntitySet<CTDONHAP> _CTDONHAPs;
 		
-		private EntityRef<LOAITB> _LOAITB;
-		
 		private EntityRef<NHACC> _NHACC;
 		
     #region Extensibility Method Definitions
@@ -410,7 +397,6 @@ namespace TinHocNgoiSao.Models
 		{
 			this._CTDONHANGs = new EntitySet<CTDONHANG>(new Action<CTDONHANG>(this.attach_CTDONHANGs), new Action<CTDONHANG>(this.detach_CTDONHANGs));
 			this._CTDONHAPs = new EntitySet<CTDONHAP>(new Action<CTDONHAP>(this.attach_CTDONHAPs), new Action<CTDONHAP>(this.detach_CTDONHAPs));
-			this._LOAITB = default(EntityRef<LOAITB>);
 			this._NHACC = default(EntityRef<NHACC>);
 			OnCreated();
 		}
@@ -546,10 +532,6 @@ namespace TinHocNgoiSao.Models
 			{
 				if ((this._MALOAI != value))
 				{
-					if (this._LOAITB.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnMALOAIChanging(value);
 					this.SendPropertyChanging();
 					this._MALOAI = value;
@@ -606,40 +588,6 @@ namespace TinHocNgoiSao.Models
 			set
 			{
 				this._CTDONHAPs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOAITB_THIETBI", Storage="_LOAITB", ThisKey="MALOAI", OtherKey="MALOAI", IsForeignKey=true)]
-		public LOAITB LOAITB
-		{
-			get
-			{
-				return this._LOAITB.Entity;
-			}
-			set
-			{
-				LOAITB previousValue = this._LOAITB.Entity;
-				if (((previousValue != value) 
-							|| (this._LOAITB.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._LOAITB.Entity = null;
-						previousValue.THIETBIs.Remove(this);
-					}
-					this._LOAITB.Entity = value;
-					if ((value != null))
-					{
-						value.THIETBIs.Add(this);
-						this._MALOAI = value.MALOAI;
-					}
-					else
-					{
-						this._MALOAI = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("LOAITB");
-				}
 			}
 		}
 		
@@ -2031,9 +1979,11 @@ namespace TinHocNgoiSao.Models
 		
 		private string _DIACHI;
 		
-		private EntitySet<DONHANG> _DONHANGs;
+		private string _TaiKhoan;
 		
-		private EntitySet<TKKH> _TKKHs;
+		private string _MatKhau;
+		
+		private EntitySet<DONHANG> _DONHANGs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2051,12 +2001,15 @@ namespace TinHocNgoiSao.Models
     partial void OnSDTChanged();
     partial void OnDIACHIChanging(string value);
     partial void OnDIACHIChanged();
+    partial void OnTaiKhoanChanging(string value);
+    partial void OnTaiKhoanChanged();
+    partial void OnMatKhauChanging(string value);
+    partial void OnMatKhauChanged();
     #endregion
 		
 		public KHACHHANG()
 		{
 			this._DONHANGs = new EntitySet<DONHANG>(new Action<DONHANG>(this.attach_DONHANGs), new Action<DONHANG>(this.detach_DONHANGs));
-			this._TKKHs = new EntitySet<TKKH>(new Action<TKKH>(this.attach_TKKHs), new Action<TKKH>(this.detach_TKKHs));
 			OnCreated();
 		}
 		
@@ -2180,6 +2133,46 @@ namespace TinHocNgoiSao.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaiKhoan", DbType="NVarChar(100)")]
+		public string TaiKhoan
+		{
+			get
+			{
+				return this._TaiKhoan;
+			}
+			set
+			{
+				if ((this._TaiKhoan != value))
+				{
+					this.OnTaiKhoanChanging(value);
+					this.SendPropertyChanging();
+					this._TaiKhoan = value;
+					this.SendPropertyChanged("TaiKhoan");
+					this.OnTaiKhoanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="NVarChar(100)")]
+		public string MatKhau
+		{
+			get
+			{
+				return this._MatKhau;
+			}
+			set
+			{
+				if ((this._MatKhau != value))
+				{
+					this.OnMatKhauChanging(value);
+					this.SendPropertyChanging();
+					this._MatKhau = value;
+					this.SendPropertyChanged("MatKhau");
+					this.OnMatKhauChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_DONHANG", Storage="_DONHANGs", ThisKey="MAKH", OtherKey="MAKH")]
 		public EntitySet<DONHANG> DONHANGs
 		{
@@ -2190,19 +2183,6 @@ namespace TinHocNgoiSao.Models
 			set
 			{
 				this._DONHANGs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_TKKH", Storage="_TKKHs", ThisKey="MAKH", OtherKey="MAKH")]
-		public EntitySet<TKKH> TKKHs
-		{
-			get
-			{
-				return this._TKKHs;
-			}
-			set
-			{
-				this._TKKHs.Assign(value);
 			}
 		}
 		
@@ -2237,18 +2217,6 @@ namespace TinHocNgoiSao.Models
 			this.SendPropertyChanging();
 			entity.KHACHHANG = null;
 		}
-		
-		private void attach_TKKHs(TKKH entity)
-		{
-			this.SendPropertyChanging();
-			entity.KHACHHANG = this;
-		}
-		
-		private void detach_TKKHs(TKKH entity)
-		{
-			this.SendPropertyChanging();
-			entity.KHACHHANG = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LOAITB")]
@@ -2260,8 +2228,6 @@ namespace TinHocNgoiSao.Models
 		private int _MALOAI;
 		
 		private string _TENLOAI;
-		
-		private EntitySet<THIETBI> _THIETBIs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2275,7 +2241,6 @@ namespace TinHocNgoiSao.Models
 		
 		public LOAITB()
 		{
-			this._THIETBIs = new EntitySet<THIETBI>(new Action<THIETBI>(this.attach_THIETBIs), new Action<THIETBI>(this.detach_THIETBIs));
 			OnCreated();
 		}
 		
@@ -2319,19 +2284,6 @@ namespace TinHocNgoiSao.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOAITB_THIETBI", Storage="_THIETBIs", ThisKey="MALOAI", OtherKey="MALOAI")]
-		public EntitySet<THIETBI> THIETBIs
-		{
-			get
-			{
-				return this._THIETBIs;
-			}
-			set
-			{
-				this._THIETBIs.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2350,18 +2302,6 @@ namespace TinHocNgoiSao.Models
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_THIETBIs(THIETBI entity)
-		{
-			this.SendPropertyChanging();
-			entity.LOAITB = this;
-		}
-		
-		private void detach_THIETBIs(THIETBI entity)
-		{
-			this.SendPropertyChanging();
-			entity.LOAITB = null;
 		}
 	}
 	
@@ -2880,181 +2820,6 @@ namespace TinHocNgoiSao.Models
 				{
 					this._MANV = value;
 				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TKKH")]
-	public partial class TKKH : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _MaTK;
-		
-		private System.Nullable<int> _MAKH;
-		
-		private string _TaiKhoan;
-		
-		private string _MaKhau;
-		
-		private EntityRef<KHACHHANG> _KHACHHANG;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaTKChanging(int value);
-    partial void OnMaTKChanged();
-    partial void OnMAKHChanging(System.Nullable<int> value);
-    partial void OnMAKHChanged();
-    partial void OnTaiKhoanChanging(string value);
-    partial void OnTaiKhoanChanged();
-    partial void OnMaKhauChanging(string value);
-    partial void OnMaKhauChanged();
-    #endregion
-		
-		public TKKH()
-		{
-			this._KHACHHANG = default(EntityRef<KHACHHANG>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaTK", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MaTK
-		{
-			get
-			{
-				return this._MaTK;
-			}
-			set
-			{
-				if ((this._MaTK != value))
-				{
-					this.OnMaTKChanging(value);
-					this.SendPropertyChanging();
-					this._MaTK = value;
-					this.SendPropertyChanged("MaTK");
-					this.OnMaTKChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKH", DbType="Int")]
-		public System.Nullable<int> MAKH
-		{
-			get
-			{
-				return this._MAKH;
-			}
-			set
-			{
-				if ((this._MAKH != value))
-				{
-					if (this._KHACHHANG.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMAKHChanging(value);
-					this.SendPropertyChanging();
-					this._MAKH = value;
-					this.SendPropertyChanged("MAKH");
-					this.OnMAKHChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaiKhoan", DbType="NVarChar(30)")]
-		public string TaiKhoan
-		{
-			get
-			{
-				return this._TaiKhoan;
-			}
-			set
-			{
-				if ((this._TaiKhoan != value))
-				{
-					this.OnTaiKhoanChanging(value);
-					this.SendPropertyChanging();
-					this._TaiKhoan = value;
-					this.SendPropertyChanged("TaiKhoan");
-					this.OnTaiKhoanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKhau", DbType="NVarChar(30)")]
-		public string MaKhau
-		{
-			get
-			{
-				return this._MaKhau;
-			}
-			set
-			{
-				if ((this._MaKhau != value))
-				{
-					this.OnMaKhauChanging(value);
-					this.SendPropertyChanging();
-					this._MaKhau = value;
-					this.SendPropertyChanged("MaKhau");
-					this.OnMaKhauChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHACHHANG_TKKH", Storage="_KHACHHANG", ThisKey="MAKH", OtherKey="MAKH", IsForeignKey=true)]
-		public KHACHHANG KHACHHANG
-		{
-			get
-			{
-				return this._KHACHHANG.Entity;
-			}
-			set
-			{
-				KHACHHANG previousValue = this._KHACHHANG.Entity;
-				if (((previousValue != value) 
-							|| (this._KHACHHANG.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._KHACHHANG.Entity = null;
-						previousValue.TKKHs.Remove(this);
-					}
-					this._KHACHHANG.Entity = value;
-					if ((value != null))
-					{
-						value.TKKHs.Add(this);
-						this._MAKH = value.MAKH;
-					}
-					else
-					{
-						this._MAKH = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("KHACHHANG");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

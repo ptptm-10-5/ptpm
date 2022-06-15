@@ -35,17 +35,17 @@
                     <td>@item.iSoLuong</td>
                     <td>@item.ThanhTien</td>
                     <td><a href="/QLSanPham/Chitietsp/@item.iMaSP">Chi tiết sản phẩm</a></td>
-                    <td><a href="/StoreManager/XoaMatHang/@item.iMaSP">Xóa</a></td>
-                    <td><a href="/StoreManager/SuaMatHang/@item.iMaSP" class="btn btn-secondary">Sửa</a></td>
+                    <td><a href="/TinHocNgoiSao/XoaMatHang/@item.iMaSP">Xóa</a></td>
+                    <td><a href="/TinHocNgoiSao/SuaMatHang/@item.iMaSP" class="btn btn-secondary">Sửa</a></td>
                 </tr>
             }
             <tr>
                 <td colspan="3">Tổng</td>
                 <td class="text-danger text-bold">@Model.TongSLHang()</td>
                 <td> </td>
-                <td><a href="/StoreManager/XoaGioHang" class="btn btn-danger">Xóa giỏ hàng</a></td>
+                <td><a href="/TinHocNgoiSao/XoaGioHang" class="btn btn-danger">Xóa giỏ hàng</a></td>
                 <td colspan="2">
-                    @Html.ActionLink("Đặt Hàng", "XacNhanDongHang", "StoreManager", new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Đặt Hàng", "XacNhanDongHang", "TinHocNgoiSao", new { @class = "btn btn-danger" })
                 </td>
             </tr>
 

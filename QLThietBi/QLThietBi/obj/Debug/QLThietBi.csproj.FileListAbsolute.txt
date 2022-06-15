@@ -39,6 +39,3 @@ D:\GitHub\PTPM\ptpm\New folder\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentat
 C:\Users\ttung\OneDrive\Desktop\QLThietBi\QLThietBi\bin\Debug\QLThietBi.exe.config
 C:\Users\ttung\OneDrive\Desktop\QLThietBi\QLThietBi\obj\Debug\QLThietBi.exe
 C:\Users\ttung\OneDrive\Desktop\QLThietBi\QLThietBi\obj\Debug\QLThietBi.pdb
-D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\bin\Debug\QLThietBi.exe.config
-D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.exe
-D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.pdb

@@ -20,7 +20,6 @@
       <Column Name="MANCC" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="THIETBI_CTDONHANG" Member="CTDONHANGs" ThisKey="MATB" OtherKey="MATB" Type="CTDONHANG" />
       <Association Name="THIETBI_CTDONHAP" Member="CTDONHAPs" ThisKey="MATB" OtherKey="MATB" Type="CTDONHAP" />
-      <Association Name="LOAITB_THIETBI" Member="LOAITB" ThisKey="MALOAI" OtherKey="MALOAI" Type="LOAITB" IsForeignKey="true" />
       <Association Name="NHACC_THIETBI" Member="NHACC" ThisKey="MANCC" OtherKey="MANCC" Type="NHACC" IsForeignKey="true" />
     </Type>
   </Table>
@@ -91,15 +90,15 @@
       <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
       <Column Name="DIACHI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Association Name="KHACHHANG_DONHANG" Member="DONHANGs" ThisKey="MAKH" OtherKey="MAKH" Type="DONHANG" />
-      <Association Name="KHACHHANG_TKKH" Member="TKKHs" ThisKey="MAKH" OtherKey="MAKH" Type="TKKH" />
     </Type>
   </Table>
   <Table Name="dbo.LOAITB" Member="LOAITBs">
     <Type Name="LOAITB">
       <Column Name="MALOAI" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TENLOAI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="LOAITB_THIETBI" Member="THIETBIs" ThisKey="MALOAI" OtherKey="MALOAI" Type="THIETBI" />
     </Type>
   </Table>
   <Table Name="dbo.NHACC" Member="NHACCs">
@@ -132,15 +131,6 @@
       <Column Name="MATKHAU" Type="System.String" DbType="NChar(36)" CanBeNull="true" />
       <Column Name="MANV" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="NHANVIEN_TAIKHOANG" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TKKH" Member="TKKHs">
-    <Type Name="TKKH">
-      <Column Name="MaTK" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="MAKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TaiKhoan" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="MaKhau" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Association Name="KHACHHANG_TKKH" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
