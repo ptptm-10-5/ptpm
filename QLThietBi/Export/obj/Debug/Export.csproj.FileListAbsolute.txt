@@ -1,5 +1,0 @@
-C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\Export\bin\Debug\Export.dll
-C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\Export\bin\Debug\Export.pdb
-C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\Export\obj\Debug\Export.csprojResolveAssemblyReference.cache
-C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\Export\obj\Debug\Export.dll
-C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\Export\obj\Debug\Export.pdb

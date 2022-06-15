@@ -8,6 +8,6 @@ namespace DTO_QLThietBi
 {
     public class NVDangNhap
     {
-        public string MaNV;
+        public static int nv;
     }
 }

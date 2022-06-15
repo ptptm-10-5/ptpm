@@ -16,12 +16,6 @@ namespace DAL_QLThietBi
         {
 
         }
-        public List<View_Nhap> loadViewDonNhap()
-        {
-            //return db_LinhKien.DONNHAPs.Select(t => t).ToList();
-            List<View_Nhap> lsv = db_LinhKien.View_Nhaps.Select(t => t).ToList<View_Nhap>();
-            return lsv;
-        }
         public List<DONNHAP> loadDonNhap()
         {
             return db_LinhKien.DONNHAPs.Select(t => t).ToList();
@@ -92,6 +86,22 @@ namespace DAL_QLThietBi
             {
                 MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
+            }
+        }
+        public int tinhTongThanhTien(int pMaDN)
+        {
+            try
+            {
+                DONNHAP dn = db_LinhKien.DONNHAPs.Select(t => t).Where(t => t.MADN == pMaDN).FirstOrDefault();
+                List<CTDONHAP> dsCTDN = new DAL_CTDonNhap().loadCTDonNhapTheMaDN(pMaDN);
+                dn.TONGTIEN = dsCTDN.Sum(t => t.THANHTIEN);
+                luuDonNhap();
+                return int.Parse( dn.TONGTIEN.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
             }
         }
     }

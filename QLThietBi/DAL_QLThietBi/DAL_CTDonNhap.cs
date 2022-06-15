@@ -7,7 +7,6 @@ using DTO_QLThietBi;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.Linq;
-
 namespace DAL_QLThietBi
 {
     public class DAL_CTDonNhap
@@ -17,29 +16,19 @@ namespace DAL_QLThietBi
         {
 
         }
-        //public List<View_CTNhap> loadCTDonNhapMa(int pMaNhap)
-        //{
-        //    List<CTDONHAP> lst = db_LinhKien.CTDONHAPs.Where(t => t.MADN == pMaNhap).ToList<CTDONHAP>();
-        //    var kq = lst.ConvertAll(l => new View_CTNhap()
-        //    {
-
-        //    });
-        //    return kq.ToList<View_CTNhap>();
-
-        //}
-        public List<View_CTNhap> loadCTDonNhapMa(int pMa)
+        public List<CTDONHAP> loadCTDonNhap()
         {
-            return db_LinhKien.View_CTNhaps.Where(t => t.MADN == pMa).ToList();
+            return db_LinhKien.CTDONHAPs.Select(t => t).ToList();
         }
-        public List<View_CTNhap> loadCTDonNhap()
+        public List<CTDONHAP> loadCTDonNhapTheMaDN(int pMaDN)
         {
-            return db_LinhKien.View_CTNhaps.Select(t => t).ToList();
+            return db_LinhKien.CTDONHAPs.Select(t => t).Where(t => t.MADN == pMaDN).ToList();
         }
         public int themCTDonNhap(CTDONHAP ctdn)
         {
             try
-            {
-                db_LinhKien.CTDONHAPs.InsertOnSubmit(ctdn);
+            {                
+                db_LinhKien.CTDONHAPs.InsertOnSubmit(ctdn);                
                 db_LinhKien.SubmitChanges();
                 return 1;
             }
@@ -91,11 +80,11 @@ namespace DAL_QLThietBi
                 return 0;
             }
         }
-        public CTDONHAP timCTDonNhapTheoMa(int pMaCTDH)
+        public CTDONHAP timCTDonNhapTheoMaDNMaTB(int pMaDN, int pMaTB)
         {
             try
             {
-                return db_LinhKien.CTDONHAPs.Select(t => t).Where(t => t.MADN == pMaCTDH).FirstOrDefault();
+                return db_LinhKien.CTDONHAPs.Select(t => t).Where(t => t.MADN == pMaDN && t.MATB == pMaTB).FirstOrDefault();
             }
             catch (Exception ex)
             {

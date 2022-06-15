@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6FD38D0F-AC3C-40B5-90FD-2627EECFECEB}</ProjectGuid>
+    <ProjectGuid>{F524EB0B-77D8-4EE8-BD98-44A96218BFA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DTO_QLThietBi</RootNamespace>

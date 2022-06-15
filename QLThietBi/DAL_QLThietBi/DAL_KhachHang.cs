@@ -16,7 +16,6 @@ namespace DAL_QLThietBi
         {
 
         }
-       
         public List<KHACHHANG> loadKhachHang()
         {
             return db_LinhKien.KHACHHANGs.Select(t => t).ToList();

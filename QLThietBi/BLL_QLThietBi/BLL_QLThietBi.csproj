@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C3CEBC4-1AF2-4AAF-B9AD-91C4F25B0E63}</ProjectGuid>
+    <ProjectGuid>{48F29D28-F20B-4E4D-8E9C-6A8255231858}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL_QLThietBi</RootNamespace>
@@ -45,6 +45,7 @@
     <Compile Include="BLL_CoSo.cs" />
     <Compile Include="BLL_CTDonHang.cs" />
     <Compile Include="BLL_CTDonNhap.cs" />
+    <Compile Include="BLL_DMMangHinh.cs" />
     <Compile Include="BLL_DonHang.cs" />
     <Compile Include="BLL_DonNhap.cs" />
     <Compile Include="BLL_KhachHang.cs" />
@@ -53,15 +54,17 @@
     <Compile Include="BLL_NhanVien.cs" />
     <Compile Include="BLL_TaiKhoang.cs" />
     <Compile Include="BLL_ThietBi.cs" />
+    <Compile Include="BLL_View_CTNhap.cs" />
+    <Compile Include="BLL_View_DonNhap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL_QLThietBi\DAL_QLThietBi.csproj">
-      <Project>{6aa3e98a-a515-4af6-bb32-08def1f87e8f}</Project>
+      <Project>{caed5b9b-bf2d-49bd-8a7f-2e736ebea03d}</Project>
       <Name>DAL_QLThietBi</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO_QLThietBi\DTO_QLThietBi.csproj">
-      <Project>{6fd38d0f-ac3c-40b5-90fd-2627eecfeceb}</Project>
+      <Project>{f524eb0b-77d8-4ee8-bd98-44a96218bfa8}</Project>
       <Name>DTO_QLThietBi</Name>
     </ProjectReference>
   </ItemGroup>

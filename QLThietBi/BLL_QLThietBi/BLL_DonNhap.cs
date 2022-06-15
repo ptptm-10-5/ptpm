@@ -18,10 +18,7 @@ namespace BLL_QLThietBi
         {
             dalDonNhap = new DAL_DonNhap();
         }
-        public List<View_Nhap> loadViewDonNhap()
-        {
-            return dalDonNhap.loadViewDonNhap();
-        }
+
         public List<DONNHAP> loadDonNhap()
         {
             return dalDonNhap.loadDonNhap();
@@ -45,6 +42,10 @@ namespace BLL_QLThietBi
         public DONNHAP timDonNhapTheoMa(int pMaDN)
         {
             return dalDonNhap.timDonNhapTheoMa(pMaDN);
+        }
+        public int tinhTongThanhTien(int pMaDN)
+        {
+            return dalDonNhap.tinhTongThanhTien(pMaDN);
         }
     }
 }
