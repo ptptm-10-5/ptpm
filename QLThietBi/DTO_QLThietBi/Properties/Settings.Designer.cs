@@ -33,5 +33,16 @@ namespace DTO_QLThietBi.Properties {
                 return ((string)(this["QL_THIETBIConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QDRGJQ8\\SQLEXPRESS;Initial Catalog=QL_THIETBI;Integrated Secu" +
+            "rity=True")]
+        public string QL_THIETBIConnectionString1 {
+            get {
+                return ((string)(this["QL_THIETBIConnectionString1"]));
+            }
+        }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_THIETBI" Class="QL_LinhKienDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8FOJEEQ\TUNGINSPR15;Initial Catalog=QL_THIETBI;User ID=sa" SettingsObjectName="DTO_QLThietBi.Properties.Settings" SettingsPropertyName="QL_THIETBIConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-QDRGJQ8\SQLEXPRESS;Initial Catalog=QL_THIETBI;Integrated Security=True" SettingsObjectName="DTO_QLThietBi.Properties.Settings" SettingsPropertyName="QL_THIETBIConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BAOCAO" Member="BAOCAOs">
     <Type Name="BAOCAO">
       <Column Name="MABC" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -191,4 +191,46 @@
       <Association Name="NHANVIEN_DMMANGHINH" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.show_DB" Method="show_DB">
+    <Parameter Name="ngay" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="show_DBResult">
+      <Column Name="TENTB" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="TENNCC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TongSoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrungBinhGiaBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrungBinhGiaNhap" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DoanhThu" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.show_DB_Thang" Method="show_DB_Thang">
+    <Parameter Name="thang" Type="System.Int32" DbType="Int" />
+    <ElementType Name="show_DB_ThangResult">
+      <Column Name="TENTB" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="tenNCC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="tongSLBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trungBinhGiaBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trungBinhGiaNhap" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="doanhThu" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.show_DB_Quy_1" Method="show_DB_Quy_1">
+    <ElementType Name="show_DB_Quy_1Result">
+      <Column Name="TENTB" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="tenNCC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="tongSLBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trungBinhGiaBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trungBinhGiaNhap" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="doanhThu" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.show_DB_Quy_2" Method="show_DB_Quy_2">
+    <ElementType Name="show_DB_Quy_2Result">
+      <Column Name="TENTB" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="tenNCC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="tongSLBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trungBinhGiaBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trungBinhGiaNhap" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="doanhThu" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
