@@ -1,6 +1,6 @@
 ﻿namespace QLThietBi.Presentation
 {
-    partial class GUI_DonNhapHang
+    partial class GUI_DonHang_2
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,16 @@
         {
             this.SuspendLayout();
             // 
-            // GUI_DonNhapHang
+            // GUI_DonHang_2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Name = "GUI_DonNhapHang";
-            this.Text = "GUI_DonNhapHang";
-            this.Load += new System.EventHandler(this.GUI_DonNhapHang_Load);
+            this.ClientSize = new System.Drawing.Size(1142, 738);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "GUI_DonHang_2";
+            this.Text = "GUI_DonHang_2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

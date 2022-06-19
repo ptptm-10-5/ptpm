@@ -244,6 +244,14 @@ namespace DTO_QLThietBi
 				return this.GetTable<DMMANGHINH>();
 			}
 		}
+		
+		public System.Data.Linq.Table<VIEW_GIOHANG> VIEW_GIOHANGs
+		{
+			get
+			{
+				return this.GetTable<VIEW_GIOHANG>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BAOCAO")]
@@ -3733,6 +3741,141 @@ namespace DTO_QLThietBi
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VIEW_GIOHANG")]
+	public partial class VIEW_GIOHANG
+	{
+		
+		private int _MADH;
+		
+		private int _MATB;
+		
+		private string _TENTB;
+		
+		private System.Nullable<int> _SOLUONG;
+		
+		private System.Nullable<decimal> _GIABAN;
+		
+		private System.Nullable<decimal> _THANHTIEN;
+		
+		private string _HINHANH;
+		
+		public VIEW_GIOHANG()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MADH", DbType="Int NOT NULL")]
+		public int MADH
+		{
+			get
+			{
+				return this._MADH;
+			}
+			set
+			{
+				if ((this._MADH != value))
+				{
+					this._MADH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATB", DbType="Int NOT NULL")]
+		public int MATB
+		{
+			get
+			{
+				return this._MATB;
+			}
+			set
+			{
+				if ((this._MATB != value))
+				{
+					this._MATB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTB", DbType="NVarChar(1000)")]
+		public string TENTB
+		{
+			get
+			{
+				return this._TENTB;
+			}
+			set
+			{
+				if ((this._TENTB != value))
+				{
+					this._TENTB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOLUONG", DbType="Int")]
+		public System.Nullable<int> SOLUONG
+		{
+			get
+			{
+				return this._SOLUONG;
+			}
+			set
+			{
+				if ((this._SOLUONG != value))
+				{
+					this._SOLUONG = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIABAN", DbType="Money")]
+		public System.Nullable<decimal> GIABAN
+		{
+			get
+			{
+				return this._GIABAN;
+			}
+			set
+			{
+				if ((this._GIABAN != value))
+				{
+					this._GIABAN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_THANHTIEN", DbType="Money")]
+		public System.Nullable<decimal> THANHTIEN
+		{
+			get
+			{
+				return this._THANHTIEN;
+			}
+			set
+			{
+				if ((this._THANHTIEN != value))
+				{
+					this._THANHTIEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HINHANH", DbType="NVarChar(150)")]
+		public string HINHANH
+		{
+			get
+			{
+				return this._HINHANH;
+			}
+			set
+			{
+				if ((this._HINHANH != value))
+				{
+					this._HINHANH = value;
+				}
 			}
 		}
 	}

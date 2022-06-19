@@ -23,6 +23,18 @@ namespace BLL_QLThietBi
         {
             return dalThietBi.loadThietBi();
         }
+        public List<THIETBI> loadThietBiTheoMaLoai(int pMaLoai)
+        {
+            return dalThietBi.loadThietBiTheoMaLoai(pMaLoai);
+        }
+        public List<THIETBI> loadThietBiTheoTen(string pTen)
+        {
+            return dalThietBi.loadThietBiTheoTen(pTen);
+        }
+        public List<THIETBI> loadThietBiTheoGia(int pGiaDuoi, int pGiaTren)
+        {
+            return dalThietBi.loadThietBiTheoGia(pGiaDuoi, pGiaTren);
+        }
         public int themThietBi(THIETBI tb)
         {
             return dalThietBi.themThietBi(tb);
@@ -43,5 +55,6 @@ namespace BLL_QLThietBi
         {
             return dalThietBi.timThietBiTheoMa(pMatb);
         }
+
     }
 }

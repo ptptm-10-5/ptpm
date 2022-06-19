@@ -88,5 +88,21 @@ namespace DAL_QLThietBi
                 return null;
             }
         }
+        public int thanhToanDonHang(DONHANG pDH)
+        {
+            try
+            {
+                DONHANG dh = db_LinhKien.DONHANGs.Where(t => t.MADH == pDH.MADH).FirstOrDefault();
+                dh = pDH;
+                dh.TINHTRANG = "HOÀN THÀNH";
+                db_LinhKien.SubmitChanges();
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
     }
 }

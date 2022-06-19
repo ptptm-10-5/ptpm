@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QLThietBi.Presentation
 {
-    public partial class GUI_DonNhapHang : Form
+    public partial class GUI_DonHang_2 : Form
     {
-        public GUI_DonNhapHang()
+        public GUI_DonHang_2()
         {
             InitializeComponent();
-        }
-
-        private void GUI_DonNhapHang_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

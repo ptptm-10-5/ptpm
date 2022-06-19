@@ -206,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1021, 800);
             this.Controls.Add(this.dtgCoSo);
             this.Controls.Add(this.btnExport);
@@ -227,6 +227,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GUI_CoSo";
             this.Text = "GUI_CoSo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GUI_CoSo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

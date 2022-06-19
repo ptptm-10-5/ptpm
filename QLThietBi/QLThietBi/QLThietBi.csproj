@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentation\GUI_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\GUI_BanHang.Designer.cs">
+      <DependentUpon>GUI_BanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\GUI_CoSo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +64,17 @@
     <Compile Include="Presentation\GUI_DangNhap.Designer.cs">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\GUI_DonNhapHang.cs">
+    <Compile Include="Presentation\GUI_DonHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\GUI_DonNhapHang.Designer.cs">
-      <DependentUpon>GUI_DonNhapHang.cs</DependentUpon>
+    <Compile Include="Presentation\GUI_DonHang.Designer.cs">
+      <DependentUpon>GUI_DonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\GUI_DonHang_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\GUI_DonHang_2.Designer.cs">
+      <DependentUpon>GUI_DonHang_2.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\GUI_KhachHang.cs">
       <SubType>Form</SubType>
@@ -120,17 +132,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\GUI_BanHang.resx">
+      <DependentUpon>GUI_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\GUI_CoSo.resx">
+      <DependentUpon>GUI_CoSo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\GUI_DonNhapHang.resx">
-      <DependentUpon>GUI_DonNhapHang.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\GUI_DonHang.resx">
+      <DependentUpon>GUI_DonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\GUI_DonHang_2.resx">
+      <DependentUpon>GUI_DonHang_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\GUI_KhachHang.resx">
+      <DependentUpon>GUI_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\GUI_Loai.resx">
       <DependentUpon>GUI_Loai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\GUI_Main.resx">
       <DependentUpon>GUI_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\GUI_NhaCungCap.resx">
+      <DependentUpon>GUI_NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\GUI_NhapHang.resx">
       <DependentUpon>GUI_NhapHang.cs</DependentUpon>
@@ -257,8 +284,15 @@
     <Content Include="Resources\AZDT01.jpg" />
     <Content Include="Resources\AZDT02.jpg" />
     <Content Include="Resources\b.jpg" />
+    <Content Include="Resources\buy-online.png" />
+    <Content Include="Resources\buy.png" />
+    <Content Include="Resources\buy2.png" />
+    <Content Include="Resources\buy3.png" />
+    <Content Include="Resources\buy_6.png" />
+    <Content Include="Resources\cancellation.png" />
     <Content Include="Resources\Close-2-icon - Copy.png" />
     <Content Include="Resources\Close-2-icon.png" />
+    <Content Include="Resources\delete %281%29.png" />
     <Content Include="Resources\Delete - Copy.png" />
     <Content Include="Resources\Delete.png" />
     <Content Include="Resources\delete_Image.png" />
@@ -300,8 +334,12 @@
     <Content Include="Resources\SSTV01.jpg" />
     <Content Include="Resources\SSTV02.jpg" />
     <Content Include="Resources\SSTV03.jpg" />
+    <Content Include="Resources\wallet %281%29.png" />
     <Content Include="Resources\XDT01.jpg" />
     <Content Include="Resources\XDT02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

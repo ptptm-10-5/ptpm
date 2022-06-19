@@ -43,5 +43,9 @@ namespace BLL_QLThietBi
         {
             return dalDonHang.timDonHangTheoMa(pMaDH);
         }
+        public int thanhToanDonHang(DONHANG pDH)
+        {
+            return dalDonHang.thanhToanDonHang(pDH);
+        }
     }
 }

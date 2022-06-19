@@ -347,6 +347,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GUI_ThietBi";
             this.Text = "GUI_ThietBi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GUI_ThietBi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgThietBi)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -26,6 +26,10 @@ namespace QLThietBi.Presentation
             IsMdiContainer = true;
             int maNV = NVDangNhap.nv;
             loadMenuDangNhap(maNV);
+
+            GUI_BanHang fr = new GUI_BanHang();
+            fr.MdiParent = this;
+            fr.Show();
         }
         
         void loadMenuDangNhap(int maNV)
@@ -153,6 +157,19 @@ namespace QLThietBi.Presentation
             }
         }
 
+        private void hơnĐơnXuâtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = kiemtratontai(typeof(GUI_DonHang));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                GUI_DonHang fr = new GUI_DonHang();
+                fr.MdiParent = this;
+                fr.Show();
+            }
+        }
+
         void loadDanhSachMangHinh(int maNV)
         {
             List<DMMANGHINH> dsMangHinh = bllDMMangHinh.loadDMMangHinhTheoMaNV(maNV, false);
@@ -217,6 +234,8 @@ namespace QLThietBi.Presentation
             if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn thoát!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))            
                 this.Visible = false;                            
         }
+
+        
 
         
 

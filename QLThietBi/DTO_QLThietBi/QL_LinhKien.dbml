@@ -191,4 +191,15 @@
       <Association Name="NHANVIEN_DMMANGHINH" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.VIEW_GIOHANG" Member="VIEW_GIOHANGs">
+    <Type Name="VIEW_GIOHANG">
+      <Column Name="MADH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MATB" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENTB" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GIABAN" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="THANHTIEN" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

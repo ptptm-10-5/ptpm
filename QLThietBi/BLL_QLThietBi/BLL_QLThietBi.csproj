@@ -56,6 +56,7 @@
     <Compile Include="BLL_ThietBi.cs" />
     <Compile Include="BLL_View_CTNhap.cs" />
     <Compile Include="BLL_View_DonNhap.cs" />
+    <Compile Include="BLL_VIEW_GioHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

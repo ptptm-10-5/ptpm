@@ -8,6 +8,7 @@ using DTO_QLThietBi;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.Linq;
+
 namespace BLL_QLThietBi
 {
     public class BLL_CTDonHang
@@ -22,6 +23,10 @@ namespace BLL_QLThietBi
         public List<CTDONHANG> loadCTDonHang()
         {
             return dalCTDonHang.loadCTDonHang();
+        }
+        public List<CTDONHANG> loadCTDonHangTheoMa(int pMaDH)
+        {
+            return dalCTDonHang.loadCTDonHangTheoMa(pMaDH);
         }
         public int themCTDonHang(CTDONHANG ctdh)
         {
@@ -39,9 +44,13 @@ namespace BLL_QLThietBi
         {
             return dalCTDonHang.luuCTDonHang();
         }
-        //public CTDONHANG timCTDonHangTheoMa(int pMactdh)
-        //{
-        //    return dalCTDonHang.timCTDonHangTheoMa(pMactdh);
-        //}
+        public int tinhTongCTDonHang(int pMaDH)
+        {
+            return dalCTDonHang.tinhTongCTDonHang(pMaDH);
+        }
+        public CTDONHANG timCTDonHangTheoMaSP(int pMaDH, int pMaTB)
+        {
+            return dalCTDonHang.timCTDonHangTheoMaSP(pMaDH, pMaTB);
+        }
     }
 }

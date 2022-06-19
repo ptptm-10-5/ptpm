@@ -20,6 +20,18 @@ namespace DAL_QLThietBi
         {
             return db_LinhKien.CTDONHANGs.Select(t => t).ToList();
         }
+        public List<CTDONHANG> loadCTDonHangTheoMa(int pMaDH)
+        {
+            try
+            {
+                return db_LinhKien.CTDONHANGs.Select(t => t).Where(t => t.MADH == pMaDH).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }            
+        }
         public int themCTDonHang(CTDONHANG ctdh)
         {
             try
@@ -76,17 +88,29 @@ namespace DAL_QLThietBi
                 return 0;
             }
         }
-        //public CTDONHANG timCTDonHangTheoMa(int pMaCTDH)
-        //{
-        //    try
-        //    {
-        //        return db_LinhKien.CTDONHANGs.Select(t => t).Where(t => t.MADH == pMaCTDH).FirstOrDefault();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return null;
-        //    }
-        //}
+        public int tinhTongCTDonHang(int pMaDH)
+        {
+            try
+            {
+                return int.Parse(db_LinhKien.CTDONHANGs.Select(t => t).Where(t => t.MADH == pMaDH).Sum(t => t.THANHTIEN).ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+        public CTDONHANG timCTDonHangTheoMaSP(int pMaDH, int pMaTB)
+        {
+            try
+            {
+                return db_LinhKien.CTDONHANGs.Select(t => t).Where(t => t.MADH == pMaDH && t.MATB == pMaTB).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }        
     }
 }

@@ -20,6 +20,30 @@ namespace DAL_QLThietBi
         {
             return db_LinhKien.THIETBIs.Select(t => t).ToList();
         }
+        public List<THIETBI> loadThietBiTheoMaLoai(int pMaLoai)
+        {            
+            try
+            {
+                return db_LinhKien.THIETBIs.Select(t => t).Where(t => t.MALOAI == pMaLoai).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+        public List<THIETBI> loadThietBiTheoGia(int pGiaDuoi, int pGiaTren)
+        {
+            try
+            {
+                return db_LinhKien.THIETBIs.Select(t => t).Where(t => t.GIA >= pGiaDuoi && t.GIA <= pGiaTren).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
         public int themThietBi(THIETBI tb)
         {
             try
@@ -87,6 +111,10 @@ namespace DAL_QLThietBi
                 MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
+        }
+        public List<THIETBI> loadThietBiTheoTen(string pTen)
+        {
+            return db_LinhKien.THIETBIs.Select(t => t).Where(t => t.TENTB.Contains(pTen)).ToList();
         }
     }
 }
