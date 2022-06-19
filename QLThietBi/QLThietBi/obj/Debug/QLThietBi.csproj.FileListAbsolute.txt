@@ -42,6 +42,7 @@ C:\Users\ttung\OneDrive\Desktop\QLThietBi\QLThietBi\obj\Debug\QLThietBi.pdb
 D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\bin\Debug\QLThietBi.exe.config
 D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.exe
 D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.pdb
+<<<<<<< HEAD
 D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\bin\Debug\QLThietBi.exe
 D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\bin\Debug\QLThietBi.pdb
 D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\bin\Debug\BLL_QLThietBi.dll
@@ -66,3 +67,28 @@ D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_CoS
 D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_DonHang_2.resources
 D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_KhachHang.resources
 D:\GitHub\PTPM\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_NhaCungCap.resources
+=======
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\bin\Debug\QLThietBi.exe.config
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.exe
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\bin\Debug\QLThietBi.exe
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\bin\Debug\QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\bin\Debug\BLL_QLThietBi.dll
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\bin\Debug\DTO_QLThietBi.dll
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\bin\Debug\DAL_QLThietBi.dll
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\bin\Debug\BLL_QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\bin\Debug\DTO_QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\bin\Debug\DAL_QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.csprojResolveAssemblyReference.cache
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_DangNhap.resources
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_DonNhapHang.resources
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_Loai.resources
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_Main.resources
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_NhapHang.resources
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_PhanQuyen.resources
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_TaiKhoang.resources
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_ThietBi.resources
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Properties.Resources.resources
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.csproj.GenerateResource.Cache
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\QLThietBi\obj\Debug\QLThietBi.Presentation.GUI_BaoCao.resources
+>>>>>>> 3b0710bd47e6eb5c51ed13bbb304a0c05bc0cac6

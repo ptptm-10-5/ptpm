@@ -19,29 +19,21 @@ namespace BLL_QLThietBi
             dalBaocao = new DAL_BaoCao();
         }
 
-        public List<BAOCAO> loadBaoCao()
+        public List<show_DBResult> timKiemNgay(DateTime ngay)
         {
-            return dalBaocao.loadBaoCao();
+            return dalBaocao.timKiemNgay(ngay);
         }
-        public int themBaocao(BAOCAO bc)
+        public List<show_DB_ThangResult> timKiemThang(int thang)
         {
-            return dalBaocao.themBaoCao(bc);
+            return dalBaocao.timKiemThang(thang);
         }
-        public int xoaBaoCao(BAOCAO pBaoCao)
+        public List<show_DB_Quy_1Result> timKiemQuy1()
         {
-            return dalBaocao.xoaBaoCao(pBaoCao);
+            return dalBaocao.timKiemQuy1();
         }
-        public int suaBaoCao(BAOCAO bc)
+        public List<show_DB_Quy_2Result> timKiemQuy2()
         {
-            return dalBaocao.suaBaoCao(bc);
-        }
-        public int luuBaoCao()
-        {
-            return dalBaocao.luuBaoCao();
-        }
-        public BAOCAO timBaocaoTheoMa(int pMaBC)
-        {
-            return dalBaocao.timBaoCaoTheoMa(pMaBC);
+            return dalBaocao.timKiemQuy2();
         }
     }
 }

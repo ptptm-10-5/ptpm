@@ -16,76 +16,56 @@ namespace DAL_QLThietBi
         {
 
         }
-        public List<BAOCAO> loadBaoCao()
-        {
-            return db_LinhKien.BAOCAOs.Select(t => t).ToList();
-        }
-        public int themBaoCao(BAOCAO bc)
+        public List<show_DBResult> timKiemNgay(DateTime ngay)
         {
             try
             {
-                db_LinhKien.BAOCAOs.InsertOnSubmit(bc);
-                db_LinhKien.SubmitChanges();
-                return 1;
+                var data = db_LinhKien.show_DB(ngay).ToList();
+                return data;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
+
+                throw;
             }
         }
-        public int xoaBaoCao(BAOCAO bc)
+        public List<show_DB_ThangResult> timKiemThang(int thang)
         {
             try
             {
-                db_LinhKien.BAOCAOs.DeleteOnSubmit(bc);
-                db_LinhKien.SubmitChanges();
-                return 1;
+                var data = db_LinhKien.show_DB_Thang(thang).ToList();
+                return data;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
+
+                throw;
             }
         }
-        public int suaBaoCao(BAOCAO pNV)
+        public List<show_DB_Quy_1Result> timKiemQuy1()
         {
             try
             {
-                BAOCAO bc = db_LinhKien.BAOCAOs.Where(t => t.MANV == pNV.MANV).FirstOrDefault();
-                bc = pNV;
-                db_LinhKien.SubmitChanges();
-                return 1;
+                var data = db_LinhKien.show_DB_Quy_1().ToList();
+                return data;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
+
+                throw;
             }
         }
-        public int luuBaoCao()
+        public List<show_DB_Quy_2Result> timKiemQuy2()
         {
             try
             {
-                db_LinhKien.SubmitChanges();
-                return 1;
+                var data = db_LinhKien.show_DB_Quy_2().ToList();
+                return data;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
-            }
-        }
-        public BAOCAO timBaoCaoTheoMa(int pMaBC)
-        {
-            try
-            {
-                return db_LinhKien.BAOCAOs.Select(t => t).Where(t => t.MANV == pMaBC).FirstOrDefault();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
+
+                throw;
             }
         }
     }

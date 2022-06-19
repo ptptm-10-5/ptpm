@@ -9,8 +9,17 @@ D:\GitHub\PTPM\ptpm\New folder\QLThietBi\DTO_QLThietBi\bin\Debug\DTO_QLThietBi.p
 D:\GitHub\PTPM\ptpm\New folder\QLThietBi\DTO_QLThietBi\obj\Debug\DTO_QLThietBi.dll
 D:\GitHub\PTPM\ptpm\New folder\QLThietBi\DTO_QLThietBi\obj\Debug\DTO_QLThietBi.pdb
 D:\GitHub\PTPM\ptpm\New folder\QLThietBi\DTO_QLThietBi\obj\Debug\DTO_QLThietBi.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 D:\GitHub\PTPM\ptpm\QLThietBi\DTO_QLThietBi\bin\Debug\DTO_QLThietBi.dll.config
 D:\GitHub\PTPM\ptpm\QLThietBi\DTO_QLThietBi\bin\Debug\DTO_QLThietBi.dll
 D:\GitHub\PTPM\ptpm\QLThietBi\DTO_QLThietBi\bin\Debug\DTO_QLThietBi.pdb
 D:\GitHub\PTPM\ptpm\QLThietBi\DTO_QLThietBi\obj\Debug\DTO_QLThietBi.dll
 D:\GitHub\PTPM\ptpm\QLThietBi\DTO_QLThietBi\obj\Debug\DTO_QLThietBi.pdb
+=======
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\DTO_QLThietBi\bin\Debug\DTO_QLThietBi.dll.config
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\DTO_QLThietBi\bin\Debug\DTO_QLThietBi.dll
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\DTO_QLThietBi\bin\Debug\DTO_QLThietBi.pdb
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\DTO_QLThietBi\obj\Debug\DTO_QLThietBi.csprojResolveAssemblyReference.cache
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\DTO_QLThietBi\obj\Debug\DTO_QLThietBi.dll
+C:\Users\DELL XPS\Documents\GitHub\ptpm\QLThietBi\DTO_QLThietBi\obj\Debug\DTO_QLThietBi.pdb
+>>>>>>> 3b0710bd47e6eb5c51ed13bbb304a0c05bc0cac6

@@ -46,11 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Presentation\GUI_BanHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation\GUI_BanHang.Designer.cs">
       <DependentUpon>GUI_BanHang.cs</DependentUpon>
+=======
+    <Compile Include="Presentation\GUI_BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\GUI_BaoCao.Designer.cs">
+      <DependentUpon>GUI_BaoCao.cs</DependentUpon>
+>>>>>>> 3b0710bd47e6eb5c51ed13bbb304a0c05bc0cac6
     </Compile>
     <Compile Include="Presentation\GUI_CoSo.cs">
       <SubType>Form</SubType>
@@ -132,11 +140,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="Presentation\GUI_BanHang.resx">
       <DependentUpon>GUI_BanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\GUI_CoSo.resx">
       <DependentUpon>GUI_CoSo.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Presentation\GUI_BaoCao.resx">
+      <DependentUpon>GUI_BaoCao.cs</DependentUpon>
+>>>>>>> 3b0710bd47e6eb5c51ed13bbb304a0c05bc0cac6
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>

@@ -235,6 +235,19 @@ namespace QLThietBi.Presentation
                 this.Visible = false;                            
         }
 
+        private void baoCaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = kiemtratontai(typeof(GUI_BaoCao));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                GUI_BaoCao fr = new GUI_BaoCao();
+                fr.MdiParent = this;
+                fr.Show();
+            }
+        }
+
         
 
         
